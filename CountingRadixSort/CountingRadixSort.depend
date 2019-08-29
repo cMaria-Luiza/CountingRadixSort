@@ -2,5 +2,10 @@
 1567041345 source:c:\users\maluc\desktop\countingradixsort\countingradixsort\lib.c
 	"lib.h"
 
-1567041382 c:\users\maluc\desktop\countingradixsort\countingradixsort\lib.h
+1567046780 c:\users\maluc\desktop\countingradixsort\countingradixsort\lib.h
+
+1567046767 source:c:\users\maluc\desktop\countingradixsort\countingradixsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
 

@@ -1,7 +1,8 @@
 #include "lib.h"
 
-void countingSort(int *A, int tam, int k)
+void countingSort(int *A, int tam)
 {
+    int k = maiorValor(A, tam);
     int aux[++k];
     for(int i = 0; i < k; i++) {
         aux[i] = 0; // zera todas as posicoes
@@ -18,6 +19,14 @@ void countingSort(int *A, int tam, int k)
     }
 }
 
+/*void radixSort(int *A, int tam)
+{
+    int m = maiorValor(A, tam);
+    for(int exp = 1, m/exp > 0; exp *= 10) {
+        countingSort()
+    }
+}*/
+
 int maiorValor(int *A, int tam)
 {
     int maior = 0;
@@ -28,3 +37,5 @@ int maiorValor(int *A, int tam)
 
     return maior;
 }
+
+

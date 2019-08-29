@@ -5,10 +5,8 @@
 int main()
 {
     int tam = 11;
-    int vetor[MAX] = {6, 0, 2, 0, 1, 3, 4, 6, 1, 3, 2};
-    int maior = maiorValor(vetor, tam);
-    printf("%d", maior);
-    countingSort(vetor, tam, maior);
+    int vetor[MAX] = {5, 6, 10, 15, 1, 6, 0, 5, 2, 1, 0};
+    countingSort(vetor, tam);
 
     printf("\n");
     for(int i = 0; i < tam; i++) {
