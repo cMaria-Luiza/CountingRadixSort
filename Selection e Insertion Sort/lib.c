@@ -12,6 +12,8 @@ void selectionSort(int *A, int tam)
     }
 }
 
+/* retorna o indice do menor valor do array a partir da posicao
+    passada nos parametros(start)*/
 int menorIndex(int A[], int tam, int s)
 {
     int index = s;
@@ -25,10 +27,10 @@ int menorIndex(int A[], int tam, int s)
 
 void print(int A[], int tam)
 {
-    printf("\t>>> ");
-    for(int i = 0; i < tam-1; i++)
-        printf("%d, ", A[i]);
-    printf("%d.\n", A[tam-1]);
+    for(int i = 0; i < tam-1; i++) {
+        printf("%d\n", A[i]);
+    }
+    //printf("%d.\n", A[tam-1]);
 }
 
 void insertionSort(int *A, int tam)
