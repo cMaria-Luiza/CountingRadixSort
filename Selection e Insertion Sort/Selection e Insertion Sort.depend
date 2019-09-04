@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1567566576 source:c:\users\maluc\desktop\trabalhos de ord\selection e insertion sort\lib.c
+	<stdio.h>
+	"lib.h"
+
+1567566577 c:\users\maluc\desktop\trabalhos de ord\selection e insertion sort\lib.h
+
+1567566700 source:c:\users\maluc\desktop\trabalhos de ord\selection e insertion sort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
