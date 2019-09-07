@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1567821153 source:c:\users\maluc\desktop\trabalhos de ord\radixsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1567821075 source:c:\users\maluc\desktop\trabalhos de ord\radixsort\lib.c
+	<stdio.h>
+
+1567821060 c:\users\maluc\desktop\trabalhos de ord\radixsort\lib.h
+

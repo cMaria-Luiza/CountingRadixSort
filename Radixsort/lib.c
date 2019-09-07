@@ -1,23 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "library.h"
-
-int main()
-{
-    int v[10] = {5, 4, -12, 11, -3, 0, 1, 6, 8, 10};
-
-    int menor = menorValor(v, 10);
-    if(menor < 0)
-        arrayPositivo(v, 10, menor);
-
-    radixSort(v, 10);
-
-    voltarArrayOriginal(v, 10, menor);
-
-    for(int i = 0; i < 10; i++)
-        printf("\n%d", v[i]);
-    return 0;
-}
 
 void countingSort(int *A, int tam, int k)
 {
@@ -49,7 +30,6 @@ void radixSort(int *A, int tam)
         countingSort(A, tam, exp);
 }
 
-
 int maiorValor(int *A, int tam)
 {
     int maior = A[0];
@@ -72,6 +52,7 @@ int menorValor(int *A, int tam)
     return menor;
 }
 
+
 void arrayPositivo(int *A, int tam, int menor)
 {
     menor = -menor;
@@ -86,7 +67,45 @@ void voltarArrayOriginal(int *A, int tam, int menor)
         A[i] += menor;
 }
 
+void ordenarArquivo(FILE *arq)
+{
+    int cont = 0, tamanho = 0;
+    char linha[100], *primeiraLinha;
+
+    fgets(linha, sizeof linha, arq);
+    primeiraLinha = strtok(linha, " ");
+
+    tamanho = atoi(primeiraLinha);
+    int vetor[tamanho];
+
+    while(!feof(arq)) {
+        fscanf(arq, "%d", &vetor[cont++]);
+    }
+
+    fclose(arq);
+
+    int menor = menorValor(vetor, tamanho);
+    arrayPositivo(vetor, tamanho, menor);
+
+    radixSort(vetor, tamanho);
+
+    voltarArrayOriginal(vetor, tamanho, menor);
 
 
+    criarNovoArq(vetor, tamanho);
 
 
+}
+
+void criarNovoArq(int v[], int tam)
+{
+    FILE *arquivo = fopen("ArquivoOrdenado.txt", "w+");
+
+    if (arquivo != NULL) {
+        for(int i = 0; i < tam; i++) {
+            fprintf(arquivo,"%d\n", v[i]);
+        }
+        fclose(arquivo);
+        printf("Novo arquivo ordenado foi criado.\n\n");
+    }
+}
